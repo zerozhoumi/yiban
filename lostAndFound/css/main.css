@@ -1,0 +1,20 @@
+body .blooming-menu__container {
+    left: 90%;
+    bottom: 0px;
+    top: auto;
+    position: absolute;
+}
+.blooming-menu__item:nth-of-type(1) .blooming-menu__item-btn {
+    background-image: url(../images/lost.png);
+    background-size: 70%;
+}
+.blooming-menu__item:nth-of-type(2) .blooming-menu__item-btn {
+    background-image: url(../images/edit.png);
+}
+.blooming-menu__item:nth-of-type(3) .blooming-menu__item-btn {
+    background-image: url(../images/home.png);
+}
+.blooming-menu__item-btn:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+    opacity: 1;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>我的信息</title>
+</head>
+<link rel="stylesheet" href="lib/layui/css/layui.css">
+<body>
+<h1 id="name">你好</h1>
+<img src="" alt="用户头像" id="upic">
+<!--自己的信息表通过id检索-->
+<!--带编辑功能-->
+<table class="layui-table" lay-data="{height:600, url:'test/test.json', page:true, id:'test'}" lay-filter="test">
+    <thead>
+    <tr>
+        <th lay-data="{field:'lostFound', width: 100}">丢/得</th>
+        <th lay-data="{field:'title', width:100}">标题</th>
+        <th lay-data="{field:'moreInfo', width:300}">详情</th>
+        <th lay-data="{field:'lostType', width:100}">物品类型</th>
+        <th lay-data="{field:'time', width:80, sort: true}">时间</th>
+    </tr>
+    </thead>
+</table>
+</body>
+<script src="lib/layui/layui.js"></script>
+<script src="lib/jquery-3.2.1.js"></script>
+<script src="js/listView.js"></script>
+</html>

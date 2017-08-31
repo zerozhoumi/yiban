@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>信息录入</title>
+</head>
+<link rel="stylesheet" href="lib/layui/css/layui.css">
+<body>
+<form class="layui-form" action="">
+    <!--标题-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">标题</label>
+        <div class="layui-input-block">
+            <input type="text" name="title" required  lay-verify="required" placeholder="简单的说下什么物品吧(必填)" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <!--文本-->
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">详情描述</label>
+        <div class="layui-input-block">
+            <textarea name="moreinfo" placeholder="你可以描述一下，可能更容易找到" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <!--图片上传-->
+    <div class="layui-form-item layui-upload ">
+        <button type="button" class="layui-btn" id="uploadPic">
+            <i class="layui-icon">&#xe67c;</i>上传图片
+        </button>
+        <div class="layui-upload-list">
+            <img class="layui-upload-img" id="demo1">
+            <p id="demoText"></p>
+        </div>
+        <div class="layui-form-mid layui-word-aux">只能上传图片哦</div>
+    </div>
+    <!--选择-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">丢失找到</label>
+        <div class="layui-input-block">
+            <input type="radio" name="lostfound" value="lost" title="丢失"checked>
+            <input type="radio" name="lostfound" value="found" title="找到" >
+        </div>
+    </div>
+    <!--联系方式-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">手机号</label>
+        <div class="layui-input-block">
+            <input type="text" name="phone" required  lay-verify="required" placeholder="请输入手机号(必填)" autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <!--什么类别-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">选择类型</label>
+        <div class="layui-input-block">
+            <select name="itemType" lay-verify="required">
+                <option value="">(必填)</option>
+                <option value="0">书本</option>
+                <option value="1">饭卡，银行卡</option>
+                <option value="2">手机，电脑</option>
+                <option value="3">钥匙</option>
+                <option value="4">其他</option>
+            </select>
+        </div>
+    </div>
+    <!--时间-->
+    <div class="layui-form-item">
+        <label class="layui-form-label">时间</label>
+        <div class="layui-input-block">
+            <input type="text" id="lostTime">
+            </div>
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+    </div>
+</form>
+
+
+</body>
+<script src="lib/layui/layui.js"></script>
+<script src="js/lostView.js"></script>
+</html>
